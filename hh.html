@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="accests/img/webicon.jpg"/>
+  <title>Mohammed Ghanam</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #000;
+      color: white;
+      background-image: url('accets/img/bg_image.jpeg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding-top: 70px;
+      width: 100%;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 10px 20px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+    header img {
+      margin-right: 10px;
+    }
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .content {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    #home {
+      padding: 50px 20px;
+      background: rgba(0, 0, 0, 0.7);
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    #home h1 {
+      font-size: 50px;
+    }
+    #languages {
+      padding: 50px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+    }
+    .languages-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .language {
+      text-align: center;
+    }
+    .language button {
+      background: transparent;
+      border: 2px solid #3A1E87;
+      border-radius: 8px;
+      padding: 10px;
+      cursor: pointer;
+      width: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .language button img {
+      width: 70px;
+      height: 60px;
+    }
+    .python_button:focus {
+      transform: translate(-5px, -5px);
+      border-top: 2px solid darkblue;
+      border-left: 2px solid darkblue;
+      border-bottom: 2px solid yellow;
+      border-right: 2px solid yellow;
+    }
+    .telegram_bot_button:focus {
+      transform: translate(5px, -5px);
+      border: 2px solid deepskyblue;
+    }
+    .html_button:focus {
+      transform: translate(-5px, 5px);
+      border: 2px solid red;
+      background: red;
+    }
+    .css_button:focus {
+      transform: translate(5px, 5px);
+      border: 2px solid blue;
+      background: blue;
+    }
+    .language button:focus {
+      outline: none;
+    }
+    span {
+      color: white;
+    }
+    .azkaralmoslem {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 100px;
+    }
+    .azkaralmoslem img {
+      width: 50%;
+      max-width: 300px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .azkaralmoslem .description {
+      width: 50%;
+      color: #fff;
+      text-align: left;
+    }
+    .azkaralmoslem h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .azkaralmoslem p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    #contact {
+      padding: 50px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .contact {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    .contact-button{
+      background: transparent;
+      border-radius: 8px;
+      padding: 10px;
+      cursor: pointer;
+      width: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+      text-decoration: none;
+      color: white;
+    }
+    .contact-button img {
+      width: 70px;
+      height: 60px;
+    }
+    #whatsapp_button{
+      border: solid 2px seagreen;
+    }
+    #whatsapp_button:active{
+      transform: translate(-20px, -20px);
+      border: 2px solid blue;
+      background: green;
+    }
+    #telegram_button{
+      border: solid 2px deepskyblue;
+    }
+    #telegram_button:active {
+      transform: translate(20px, -20px);
+      border: 2px solid blue;
+      background: deepskyblue;
+    }
+    #facebook_button{
+      border: solid 2px blue;
+    }
+    #facebook_button:active{
+      transform: translate(-20px, 20px);
+      border: 2px solid blue;
+      background: blue;
+    }
+    #email_button{
+      border-top: 2px solid red;
+      border-left: 2px solid blue;
+      border-right: 2px solid green;
+      border-bottom: 2px solid;
+    }
+    #email_button:active{
+      transform: translate(20px, 20px);
+      border: 2px solid red;
+    }
+    a{text-decoration: none;}
+    .azkaralmoslem_buttons{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+    .azkaralmoslem_button {
+      background: deepskyblue;
+      border: deepskyblue solid 2px;
+    }
+    .azkaralmoslem_button {
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+    .azkaralmoslem_button:hover {
+      background-color: #0056b3;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .channels div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
+      background: #262A5B;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .channels{
+      display: flex;
+      background: none;
+    }
+    .azkaralmoslemchannel {
+      display: flex;
+      border: 2px solid deepskyblue;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .azkaralmoslemchannel a {
+      text-decoration: none;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+    .azkaralmoslemchannel a:hover {transform: scale(1.1);}
+    .azkaralmoslemchannel img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .azkaralmoslemchannel span {
+      font-size: 16px;
+      font-weight: bold;
+      color: #007BFF;
+    }
+    #contact_me {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    #contactForm {
+      background-color: #1c1c1c;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      max-width: 400px;
+      width: 100%;  
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #ccc;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background-color: #333;
+      color: #fff;
+    }
+    input[type="text"]::placeholder,
+    input[type="email"]::placeholder,
+    input[type="number"]::placeholder,
+    textarea::placeholder {
+      color: #aaa;
+    }
+    textarea {
+      resize: none;
+    }
+    
+    h1 {margin: 20px 0; color: #444; text-align: center;}
+    .videos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .video-card {
+      width: 300px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .video-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    .video-card video { width: 100%; height: auto;}
+    .video-card span {
+      display: block;
+      padding: 10px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-top: 1px solid #ddd;
+    }
+    @media (max-width: 768px) {
+      .video-card {
+        width: 50%;
+        height: 80%;
+      }
+    }
+    .free_palestine {
+      position: fixed;
+      bottom: 50px;
+      left: 5px;
+      width: 50px;
+      height: 50px;
+      background-image: url('./accets/img/free_palestine.jpeg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      z-index: 1000;
+    }
+
+    .free_palestine.clicked {
+      width: 200px;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+      z-index: 10000;
+    }
+
+    .my_floating_photo {
+      position: fixed;
+      bottom: 50px;
+      right: 5px;
+      width: 50px;
+      height: 50px;
+      background-image: url('./accets/img/my_photo.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      z-index: 1000;
+      animation: randomMove 10s infinite alternate ease-in-out;
+    }
+
+    .my_floating_photo.clicked {
+      width: 200px;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      z-index: 10000;
+    }
+
+    @keyframes randomMove {
+      0% {
+        transform: translate(10px, 10px);
+      }
+      25% {
+        transform: translate(-100px, 50px);
+      }
+      50% {
+        transform: translate(80px, -100px);
+      }
+      75% {
+        transform: translate(-50px, -50px);
+      }
+      100% {
+        transform: translate(10px, 10px);
+      }
+    }
+    footer {
+      background: #222;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <img src="accets/img/webicon.jpg" alt="<M/>" width="20%px">
+    <nav>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="content">
+    <section id="home">
+      <h1 id="welcome">Welcome,</h1>
+      <p>I'm <b>Mohamed Ahmed Ghanem</b>, a Telegram bot and website developer.</p>
+    </section>
+
+    <section id="languages">
+      <h2>Languages</h2>
+      <br>
+      <div class="languages-container">
+        <div class="language">
+          <button class="python_button">
+            <img src="accets/img/python.png" alt="Python">
+            <span>Python</span>
+          </button>
+        </div>
+        <div class="language">
+          <button class="telegram_bot_button">
+            <img src="accets/img/telegram.png" alt="Telegram Bots">
+            <span>Telegram Bots</span>
+          </button>
+        </div>
+        <div class="language">
+          <button class="html_button">
+            <img src="accets/img/html.png" alt="HTML">
+            <span>HTML</span>
+          </button>
+        </div>
+        <div class="language">
+          <button class="css_button">
+            <img src="accets/img/css.png" alt="CSS">
+            <span>CSS</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div id="projects">
+  <center>
+    <h2>Projects</h2>
+  </center>
+  <div class="azkaralmoslem">
+    <img src="accets/img/azkaralmoslem.png" alt="Azkar Almoslem Project">
+    <div class="description">
+      <h3>« أَذْكَارُ المُسْلِم »</h3>
+      <p>موقع « أَذْكَارُ المُسْلِم » هو أحد مشاريعي المتميزة، حيث يقدم للمستخدمين مجموعة شاملة من الأذكار اليومية مبوبة ومصنفة بشكل سهل ومبسط. يهدف المشروع إلى تعزيز روحانية المستخدم وتجديد نشاطه اليومي بفضل التذكير بأذكار الصباح والمساء، أذكار ما بعد الصلاة، وأذكار متنوعة تناسب كل الأوقات. يجعل المشروع من تذكر الأذكار والتزام الذكر أمرًا ميسرًا في متناول يدك.</p>
+      <br>
+      <div class="azkaralmoslem_buttons">
+        <button class="azkaralmoslem_button">
+          <a href="https://t.me/azkaralmoslembot?start=start" target="_blank" style="color: black;">فتح البوت</a>
+        </button>
+        <button class="azkaralmoslem_button">
+          <a href="https://azkaralmoslem.netlify.app" target="_blank" style="color: black;">فتح الموقع</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div id="contact">
+    <center>
+      <h2>Contact</h2>
+    </center>
+    <br>
+    <div class="contact">
+      <button class="contact-button" id="whatsapp_button">
+        <a href="https://wa.me/201101023681" target="_blank">
+          <img src="accets/img/whatsapp.png" alt="Whatsapp Icon">
+          <span>Whatsapp</span>
+        </a>
+      </button>
+      <button class="contact-button" id="telegram_button">
+        <a href="https://t.me/midoghanam?text=السلام%20عليكم%20ورحمة%20الله%20وبركاته" target="_blank">
+          <img src="accets/img/telegram.png" alt="Telegram Image" />
+          <span>Telegram</span>
+        </a>
+      </button>
+    </div>
+    <br>
+    <div class="contact">
+      <button class="contact-button" id="facebook_button">
+        <a href="https://www.facebook.com/mido.ghanam2009?mibextid=ZbWKwL" target="_blank">
+          <img src="accets/img/facebook.png" alt="Facebook Icon">
+          <span>Facebook</span>
+        </a>
+      </button>
+      <button class="contact-button" id="email_button">
+        <a href="mailto: mohammedghanamprogrammer@hotmail.com" target="_blank">
+          <img src="accets/img/gmail.png" alt="Gmail"/>
+          <br>
+          <span>E-mail</span>
+        </a>
+      </button>
+    </div>
+  </div>
+  <h3>Channels</h3>
+  <br>
+  <div class="channels">
+    <div class="azkaralmoslemchannel">
+      <a href="https://t.me/azkar_net" target="_blank">
+        <img src="accets/img/azkaralmoslem.png" alt="Azkar Almoslem" />
+        <span>« أَذْكَارُ المُسْلِم »</span>
+      </a>
+    </div>
+  </div>
+  <br><br><br>
+  <h3>Video Edit</h3>
+  <div class="videos">
+    <div class="video-card">
+      <video controls id="arabic_song1" loop autoplay poster="accets/img/أبدا_لا_لن_نحيد.jpg">  
+        <source src="accets/videos/أبدا_لا_لن_نحيد.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <span>Arabic song <br> أَبَدًا لا لن نحيد</span>
+    </div>
+  </div>
+  <div id="contact_me">
+    <h3>Send Message</h3>  
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" rows="1" placeholder="Mohammed Ghanam" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="example@example.com" required>
+      <label for="whatsapp">WhatsApp Number:</label>
+      <input type="number" id="whatsapp" name="whatsapp" placeholder="Country code fields in ex: 201101023681" required minlength="6">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit" class="azkaralmoslem_button">Submit</button>
+    </form>
+  </div>
+  <div class="free_palestine"></div>
+  <div class="my_floating_photo"></div>
+  <footer>
+    <p>All rights reserved for <b>Mohammed Ghanam</b> &copy;</p>
+  </footer>
+  <script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var whatsapp = document.getElementById('whatsapp').value.trim();
+    var messageContent = document.getElementById('message').value.trim();
+    
+    if (!name || !email || !whatsapp || !messageContent) {
+      alert('Please fill out all fields.');
+      return;
+    }
+    
+    var message = `Name: ${name}\nEmail: ${email}\nWhatsApp Number:+${whatsapp}\nMessage: ${messageContent}`;
+    var telegramToken = '7573060217:AAE3HnTcBAwQ1X5sPoKrGg6r2WwLHv2LPe4';
+    var chatId = '6446705072';
+    var url = `https://api.telegram.org/bot${telegramToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+    
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        if (data.ok) {
+          alert('Message sent successfully!');
+          document.getElementById('contactForm').reset();
+        } else {
+          alert('Error sending message: ' + data.description);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Error sending message: ' + error.message);
+      });
+  });
+    const freePalestine = document.querySelector('.free_palestine');
+    freePalestine.addEventListener('click', () => {
+      freePalestine.classList.toggle('clicked');
+    });
+    const floatingPhoto = document.querySelector('.my_floating_photo');
+    floatingPhoto.addEventListener('click', () => {
+      floatingPhoto.classList.toggle('clicked');
+    });
+</script>
+</body>
+</html>
