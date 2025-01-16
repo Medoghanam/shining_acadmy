@@ -2,19 +2,20 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shining Acadmy</title>
+  <link rel="icon" href="accets/imgs/acadmy_logo.jpg"/>
+  <title>محمد غنام</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
     }
     body {
       background-color: #000;
       color: white;
+      background-image: url('accets/imgs/bg_image.jpg');
       background-size: cover;
       background-position: center;
       display: flex;
@@ -22,8 +23,9 @@
       align-items: center;
       justify-content: flex-start;
       min-height: 100vh;
-      padding-top: 70px;
       width: 100%;
+      padding-top: 100px; /* زيادة المسافة من أجل الـ header */
+      padding-bottom: 60px; /* لضبط المسافة العلوية للـ footer */
     }
     header {
       background: rgba(0, 0, 0, 0.6);
@@ -32,18 +34,19 @@
       width: 100%;
       position: fixed;
       top: 0;
+      left: 0;
       z-index: 1;
       display: flex;
       align-items: center;
-      justify-content: center;
-    }
-    .header {
-      display: flex;
-      width: 100%;
-      justify-content: center;
+      justify-content: space-between; /* لجعل الشعار على اليسار والرابط في المنتصف */
     }
     header img {
       margin-right: 10px;
+      margin-left: 0;
+    }
+    header nav {
+      margin-left: auto;
+      margin-right: auto;
     }
     header nav ul {
       list-style: none;
@@ -55,22 +58,55 @@
       text-decoration: none;
       font-size: 18px;
     }
+    .home {
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .home h1 {
+      font-size: 36px;
+      color: #FFD700; 
+      margin-bottom: 20px;
+    }
+    .content p {
+      font-size: 22px;
+      line-height: 1.6;
+      color: #fff;
+      margin-top: 10px;
+    }
+    footer {
+      background: #222;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+      z-index: 1;
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="header">
-      <img src="" alt="Shining acadmy" width="50" height="50">
-      <nav>
-        <ul>
-          <li><a href="#">الرئيسية</a></li>
-          <li><a href="#">المنتديات</a></li>
-          <li><a href="#">المسابقات</a></li>
-          <li><a href="#">المنشورات</a></li>
-          <li><a href="#">التواصل</a></li>
-        </ul>
-      </nav>
-    </div>
+    <img src="accets/imgs/acadmy_logo.jpg" alt="Shining Acadmy" width="5%">
+    <nav>
+      <ul>
+        <li><a href="#">الرئيسية</a></li>
+      </ul>
+    </nav>
   </header>
+
+  <div class="home">
+    <section id="home">
+      <h1>مرحبًا بك في أكاديمية الإشراق</h1>
+      <p>نحن في أكاديمية الإشراق نعمل على تقديم أفضل الأساليب التعليمية في مجال تطوير البرمجيات، حيث نهدف إلى مساعدة الطلاب على تنمية مهاراتهم التقنية بشكل متميز.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 أكاديمية الإشراق. جميع الحقوق محفوظة.</p>
+  </footer>
 </body>
 </html>
