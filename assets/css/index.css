@@ -76,7 +76,7 @@ header nav ul li a {
     border-radius: 50%; 
     cursor: pointer; 
     transition: all 0.5s ease; 
-    z-index: 1000; 
+    z-index: 1000;
 }
 .acadmy_float_logo.clicked { 
     width: 200px; 
@@ -87,10 +87,11 @@ header nav ul li a {
     border-radius: 50%; 
     z-index: 10000; 
 }
-.contact-section {
+#contact-section {
     margin-top: 20px;
     text-align: center;
 }
+
 .contact {
     display: flex;
     gap: 20px;
@@ -144,35 +145,30 @@ header nav ul li a {
 .email_button:hover{
     transform: translate(10px, 10px);
 }
-.acadmy_float_logo { 
-    position: fixed; 
-    bottom: 50px; 
-    right: 5px; 
-    width: 50px; 
-    height: 50px; 
+.acadmy_float_logo {
+    position: fixed;
+    bottom: 50px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
     background-image: url('assets/imgs/acadmy_logo.jpg');
-    background-size: cover; 
-    background-position: center; 
-    border-radius: 50%; 
-    cursor: pointer; 
-    transition: all 0.5s ease; 
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-
-.acadmy_float_logo:hover {
-    transform: scale(1.1); 
-}
-
-.acadmy_float_logo.clicked { 
-    width: 200px; 
-    height: 200px; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%) scale(1); 
-    border-radius: 50%; 
-    z-index: 10000; 
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* تحسين الظل */
+.acadmy_float_logo.clicked {
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: 10000;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 footer { 
     background: #222; 

@@ -1,4 +1,6 @@
-const acadmy_float_logo = document.querySelector('.acadmy_float_logo');
-acadmy_float_logo.addEventListener('click', () => {
-    acadmy_float_logo.classList.toggle('clicked');
+document.addEventListener('DOMContentLoaded', function() {
+    const logo = document.querySelector('.acadmy_float_logo');
+    logo.addEventListener('click', function() {
+        logo.classList.add('clicked');
+    });
 });
