@@ -120,7 +120,7 @@ header nav ul li a:hover {
     justify-content: center; 
     margin: 10px 0; 
 }
-#contact-button { 
+#contact-button{ 
     background: rgba(255, 255, 255, 0.8); 
     border: 2px solid #007bff; 
     padding: 15px 10px; 
@@ -132,9 +132,7 @@ header nav ul li a:hover {
     align-items: center; 
     width: 100px; 
 }
-#contact-button:hover { 
-    background: rgba(0, 123, 255, 0.2); 
-}
+#contact-button:hover {background: rgba(0, 123, 255, 0.2);}
 #contact-button a { 
     text-decoration: none; 
     color: #000; 
@@ -160,7 +158,11 @@ header nav ul li a:hover {
     max-width: 400px; 
     margin: auto; 
 }
-label { 
+.whatsapp_button:hover, .whatsapp_button:active, .whatsapp_button:focus{transform: translate(-10px, -10px);}
+.telegram_button:focus, .telegram_button:hover, .telegram_button:active{transform: translate(10px, -10px);}
+.facebook_button:focus, .facebook_button:hover, .facebook_button:active{transform: translate(-10px, 10px);}
+.email_button:focus, .email_button:hover, .email_button:active{transform: translate(10px, 10px);}
+label {
     display: block; 
     margin-bottom: 8px; 
     font-size: 14px; 
@@ -177,12 +179,8 @@ input[type="text"], input[type="email"], input[type="number"], textarea {
 }
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {-webkit-appearance: none; margin: 0;}
 input[type="number"] {-moz-appearance: textfield;}
-input::placeholder, textarea::placeholder { 
-    color: #aaa; 
-}
-textarea { 
-    resize: none; 
-}
+input::placeholder, textarea::placeholder {color: #aaa;}
+textarea {resize: none;}
 .submit_button { 
     background-color: #007bff; 
     color: white; 
