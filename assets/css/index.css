@@ -121,13 +121,22 @@ header nav ul li a {
 .email_button:hover{
     transform: translate(10px, 10px);
 }
+#moved_studies{
+    display: flex;
+}
+marquee div img{
+    width: 50%;
+    height: 50%;
+}
+
+
 .acadmy_float_logo {
     position: fixed;
     bottom: 50px;
     right: 5px;
     width: 50px;
     height: 50px;
-    background-image: url('assets/imgs/acadmy_logo.jpg');
+    background-image: url('./assets/imgs/acadmy_logo.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 50%;
@@ -156,3 +165,42 @@ footer {
     text-align: center; 
     z-index: 1; 
 }
+/*.hover-div {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: url('./assets/imgs/arabic_physics.png') no-repeat center center;
+    background-size: cover;
+    transition: background-color 0.3s ease;
+}
+
+.hover-div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hover-div:hover::before {
+    opacity: 1;
+}
+
+.hover-div .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hover-div:hover .text {
+    opacity: 1;
+}*/
