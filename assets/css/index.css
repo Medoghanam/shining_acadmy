@@ -97,7 +97,7 @@ header nav ul li a {
     justify-content: center;
     margin: 10px 0;
 }
-.contact-button {
+#contact-button {
     background: rgba(255, 255, 255, 0.8); 
     border: 2px solid #007bff;
     padding: 15px 10px;
@@ -109,30 +109,70 @@ header nav ul li a {
     align-items: center;
     width: 100px;
 }
-  
-.contact-button:hover {
-    background: rgba(0, 123, 255, 0.2); /* تأثير عند التمرير */
+#contact-button:hover {
+    background: rgba(0, 123, 255, 0.2);
 }
-  
-.contact-button a {
+#contact-button a {
     text-decoration: none;
     color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px; /* مسافة بين الصورة والنص */
+    gap: 5px;
 }
-  
-.contact-button img {
-    width: 40px; /* حجم الصورة */
+#contact-button img {
+    width: 40px;
     height: 40px;
-    margin-bottom: 5px; /* مسافة تحت الصورة */
+    margin-bottom: 5px;
 }
 .contact-button span {
     font-size: 14px;
     font-weight: bold;
-    color: #007bff; /* لون النص أزرق */
+    color: #007bff;
     text-align: center;
+}
+.whatsapp_button:hover{
+    transform: translate(-10px, -10px);
+}
+.telegram_button:hover{
+    transform: translate(10px, -10px);
+    color: white;
+}
+.facebook_button:hover{
+    transform: translate(-10px, 10px);
+}
+.email_button:hover{
+    transform: translate(10px, 10px);
+}
+.acadmy_float_logo { 
+    position: fixed; 
+    bottom: 50px; 
+    right: 5px; 
+    width: 50px; 
+    height: 50px; 
+    background-image: url('assets/imgs/acadmy_logo.jpg');
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    transition: all 0.5s ease; 
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.acadmy_float_logo:hover {
+    transform: scale(1.1); 
+}
+
+.acadmy_float_logo.clicked { 
+    width: 200px; 
+    height: 200px; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%) scale(1); 
+    border-radius: 50%; 
+    z-index: 10000; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* تحسين الظل */
 }
 footer { 
     background: #222; 
