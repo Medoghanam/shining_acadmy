@@ -11,3 +11,11 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     var url = `https://api.telegram.org/bot${telegramToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
     fetch(url).then(response => response.json()).then(data => {if (data.ok) {alert('Message sent successfully!');document.getElementById('contactForm').reset();} else {alert('Error sending message: ' + data.description);}}).catch(error => {console.error('Error:', error);alert('Error sending message: ' + error.message);});
 });
+
+const logo = document.querySelector('.acadmy_float_logo');
+
+// إضافة مستمع للنقر
+logo.addEventListener('click', () => {
+    // تبديل الكلاس بين "expanded" وبدون كلاس
+    logo.classList.toggle('expanded');
+});
