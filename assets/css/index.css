@@ -19,38 +19,80 @@ body {
     padding-top: 100px; 
     padding-bottom: 60px; 
 }
-header { 
-    background: rgba(16, 116, 184, 0.8); 
-    color: #fff; 
-    padding: 10px 20px; 
-    width: 100%; 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    z-index: 1; 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
+/* تنسيق الرأس */
+header {
+  background: rgba(16, 116, 184, 0.8);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-header img { 
-    margin-right: 10px; 
-    margin-left: 0; 
-    width: 25px;
-    height: auto; 
+
+/* تنسيق الصورة */
+header img {
+  margin-right: 20px;
+  width: 50px;
+  height: auto;
 }
-header nav ul { 
-    list-style: none; 
-    display: flex; 
-    gap: 20px; 
+
+/* حاوية القائمة */
+header .menu-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
-header nav ul li a { 
-    color: #fff; 
-    text-decoration: none; 
-    font-size: 18px; 
-    transition: color 0.3s; 
+
+/* الصفوف */
+header .menu-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 10px 0;
 }
-header nav ul li a:hover { 
-    color: #FFD700; 
+
+/* الروابط */
+header .menu-row a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+/* تأثير الخط المتحرك */
+header .menu-row a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #FFD700;
+  transition: width 0.3s ease;
+}
+
+/* عند التمرير على الرابط */
+header .menu-row a:hover {
+  color: #FFD700;
+}
+
+header .menu-row a:hover::after {
+  width: 100%;
+}
+
+/* الخط الفاصل */
+header hr {
+  border: 1px solid #fff;
+  width: 80%;
+  margin: 10px auto;
+  opacity: 0.6;
 }
 .home { 
     width: 100%; 
@@ -97,7 +139,6 @@ header nav ul li a:hover {
 .subject-item:hover img {
     filter: brightness(20%);
 }
-
 .subject-item h1 { 
     position: absolute; 
     top: 50%; 
